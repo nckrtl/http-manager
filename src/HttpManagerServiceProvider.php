@@ -4,6 +4,7 @@ namespace NckRtl\HttpManager;
 
 use NckRtl\HttpManager\Services\ConfigurationValidator;
 use NckRtl\HttpManager\Services\CredentialValidator;
+use NckRtl\HttpManager\Services\HttpManager;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -32,6 +33,7 @@ class HttpManagerServiceProvider extends PackageServiceProvider
         // Register validator services as singletons
         $this->app->singleton(CredentialValidator::class);
         $this->app->singleton(ConfigurationValidator::class);
+        $this->app->singleton(HttpManager::class);
     }
 
     public function packageBooted(): void
