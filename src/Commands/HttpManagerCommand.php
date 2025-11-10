@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace NckRtl\HttpManager\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class HttpManagerCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'http-manager';
 
     public $description = 'My command';
 
