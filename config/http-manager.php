@@ -19,5 +19,16 @@ return [
 
         // The foreign key column name
         'team_foreign_key' => env('HTTPMANAGER_TEAM_FOREIGN_KEY', 'team_id'),
+
+        /**
+         * Custom team resolver callable.
+         * Should return the current team ID or null.
+         *
+         * Example:
+         * 'team_resolver' => function () {
+         *     return auth()->user()?->current_team_id;
+         * },
+         */
+        'team_resolver' => null,
     ],
 ];
