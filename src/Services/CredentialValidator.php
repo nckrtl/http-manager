@@ -10,9 +10,6 @@ class CredentialValidator
     /**
      * Validate credential configuration against provider credential config
      *
-     * @param  HttpProvider  $provider
-     * @param  array  $credentialConfig
-     * @return void
      *
      * @throws ValidationException
      */
@@ -31,9 +28,6 @@ class CredentialValidator
 
     /**
      * Extract placeholders from provider credential config
-     *
-     * @param  array  $config
-     * @return array
      */
     protected function extractPlaceholders(array $config): array
     {

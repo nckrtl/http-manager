@@ -10,9 +10,6 @@ class ConfigurationValidator
     /**
      * Validate configuration against endpoint options schema
      *
-     * @param  HttpEndpoint  $endpoint
-     * @param  array  $configuration
-     * @return void
      *
      * @throws ValidationException
      */
@@ -55,10 +52,6 @@ class ConfigurationValidator
     /**
      * Validate parameters against schema
      *
-     * @param  array  $schema
-     * @param  array  $values
-     * @param  string  $context
-     * @return void
      *
      * @throws ValidationException
      */
@@ -89,10 +82,6 @@ class ConfigurationValidator
      * Validate parameter type
      *
      * @param  mixed  $value
-     * @param  string  $type
-     * @param  string  $key
-     * @param  string  $context
-     * @return void
      *
      * @throws ValidationException
      */

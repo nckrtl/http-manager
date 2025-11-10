@@ -14,7 +14,7 @@ it('validates missing credential values', function () {
         ],
     ]);
 
-    $validator = new CredentialValidator();
+    $validator = new CredentialValidator;
 
     expect(fn () => $validator->validate($provider, []))
         ->toThrow(ValidationException::class, 'Missing required credential value: token');
@@ -30,7 +30,7 @@ it('passes with valid credentials', function () {
         ],
     ]);
 
-    $validator = new CredentialValidator();
+    $validator = new CredentialValidator;
 
     // Should not throw exception
     $validator->validate($provider, ['token' => 'abc123']);
@@ -49,7 +49,7 @@ it('extracts multiple placeholders correctly', function () {
         ],
     ]);
 
-    $validator = new CredentialValidator();
+    $validator = new CredentialValidator;
 
     // Missing both values
     expect(fn () => $validator->validate($provider, []))

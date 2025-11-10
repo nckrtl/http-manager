@@ -20,7 +20,7 @@ it('validates missing required parameters', function () {
         ],
     ]);
 
-    $validator = new ConfigurationValidator();
+    $validator = new ConfigurationValidator;
 
     expect(fn () => $validator->validate($endpoint, []))
         ->toThrow(ValidationException::class, "Missing required parameter 'amount' in body");
@@ -42,7 +42,7 @@ it('passes with valid configuration', function () {
         ],
     ]);
 
-    $validator = new ConfigurationValidator();
+    $validator = new ConfigurationValidator;
 
     $validator->validate($endpoint, [
         'body' => [
@@ -66,7 +66,7 @@ it('validates parameter types', function () {
         ],
     ]);
 
-    $validator = new ConfigurationValidator();
+    $validator = new ConfigurationValidator;
 
     expect(fn () => $validator->validate($endpoint, [
         'body' => [
@@ -91,7 +91,7 @@ it('allows optional parameters to be missing', function () {
         ],
     ]);
 
-    $validator = new ConfigurationValidator();
+    $validator = new ConfigurationValidator;
 
     // Should not throw - description is optional
     $validator->validate($endpoint, [
@@ -115,7 +115,7 @@ it('validates url_params correctly', function () {
         ],
     ]);
 
-    $validator = new ConfigurationValidator();
+    $validator = new ConfigurationValidator;
 
     expect(fn () => $validator->validate($endpoint, []))
         ->toThrow(ValidationException::class, "Missing required parameter 'username' in url_params");
