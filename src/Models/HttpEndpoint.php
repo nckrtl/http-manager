@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use NckRtl\HttpManager\Concerns\HasTeamScope;
 
 /**
  * @property int $id
+ * @property int|null $team_id
  * @property int $http_provider_id
  * @property string $name
  * @property string $method
@@ -20,9 +22,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class HttpEndpoint extends Model
 {
+    use HasTeamScope;
     use SoftDeletes;
 
     protected $fillable = [
+        'team_id',
         'http_provider_id',
         'name',
         'method',
