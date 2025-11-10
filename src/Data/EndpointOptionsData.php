@@ -38,4 +38,3 @@ class EndpointOptionsData extends Data
         ];
     }
 }
-
