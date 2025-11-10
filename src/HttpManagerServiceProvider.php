@@ -15,8 +15,8 @@ class HttpManagerServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('httpmanager')
-            ->hasConfigFile('httpmanager')
+            ->name('http-manager')
+            ->hasConfigFile('http_manager')
             ->hasMigrations([
                 'create_http_providers_table',
                 'create_http_credentials_table',
@@ -30,6 +30,6 @@ class HttpManagerServiceProvider extends PackageServiceProvider
         // Publish team migrations separately
         $this->publishes([
             __DIR__.'/../database/migrations/teams' => database_path('migrations'),
-        ], 'httpmanager-teams-migrations');
+        ], 'http-manager-teams-migrations');
     }
 }

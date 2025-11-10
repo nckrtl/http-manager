@@ -8,7 +8,7 @@ return [
     |
     | Enable multi-tenant team scoping for providers, credentials, endpoints,
     | and endpoint configurations. When enabled, you must publish the team
-    | migrations using: php artisan vendor:publish --tag=httpmanager-teams-migrations
+    | migrations using: php artisan vendor:publish --tag=http-manager-teams-migrations
     |
     */
     'teams' => [
