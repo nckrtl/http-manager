@@ -6,7 +6,6 @@ use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use NckRtl\HttpManager\Exceptions\HttpManagerException;
-use NckRtl\HttpManager\Exceptions\InvalidConfigurationException;
 use NckRtl\HttpManager\Models\HttpEndpointConfiguration;
 
 class HttpManager

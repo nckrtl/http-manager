@@ -11,8 +11,8 @@ use NckRtl\HttpManager\Services\CredentialValidator;
 use NckRtl\HttpManager\Services\HttpManager;
 
 beforeEach(function () {
-    $this->credentialValidator = new CredentialValidator();
-    $this->configurationValidator = new ConfigurationValidator();
+    $this->credentialValidator = new CredentialValidator;
+    $this->configurationValidator = new ConfigurationValidator;
     $this->httpManager = new HttpManager(
         $this->configurationValidator,
         $this->credentialValidator
