@@ -16,7 +16,7 @@ class HttpManagerServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('http-manager')
-            ->hasConfigFile('http_manager')
+            ->hasConfigFile('http-manager')
             ->hasMigrations([
                 'create_http_providers_table',
                 'create_http_credentials_table',
