@@ -2,9 +2,9 @@
 
 namespace NckRtl\HttpManager;
 
+use NckRtl\HttpManager\Commands\HttpManagerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use NckRtl\HttpManager\Commands\HttpManagerCommand;
 
 class HttpManagerServiceProvider extends PackageServiceProvider
 {

@@ -3,8 +3,8 @@
 namespace NckRtl\HttpManager\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use NckRtl\HttpManager\HttpManagerServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
