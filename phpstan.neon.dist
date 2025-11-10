@@ -10,3 +10,8 @@ parameters:
     tmpDir: build/phpstan
     checkOctaneCompatibility: true
     checkModelProperties: true
+    ignoreErrors:
+        # Allow env() usage in config files - this is the correct Laravel pattern
+        -
+            message: "#Called 'env' outside of the config directory#"
+            path: config/*

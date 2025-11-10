@@ -2,7 +2,6 @@
 
 namespace NckRtl\HttpManager;
 
-use NckRtl\HttpManager\Commands\HttpManagerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -17,9 +16,20 @@ class HttpManagerServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('http-manager')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_http_manager_table')
-            ->hasCommand(HttpManagerCommand::class);
+            ->hasConfigFile('http-manager')
+            ->hasMigrations([
+                'create_http_providers_table',
+                'create_http_credentials_table',
+                'create_http_endpoints_table',
+                'create_http_endpoint_configurations_table',
+            ]);
+    }
+
+    public function packageBooted(): void
+    {
+        // Publish team migrations separately
+        $this->publishes([
+            __DIR__.'/../database/migrations/teams' => database_path('migrations'),
+        ], 'http-manager-teams-migrations');
     }
 }
