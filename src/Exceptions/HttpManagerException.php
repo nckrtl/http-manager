@@ -2,6 +2,4 @@
 
 namespace NckRtl\HttpManager\Exceptions;
 
-class HttpManagerException extends \Exception
-{
-}
+class HttpManagerException extends \Exception {}
